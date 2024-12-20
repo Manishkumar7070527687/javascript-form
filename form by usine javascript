@@ -1,0 +1,51 @@
+// javascript-form
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit=" return x ()" action="complete.html">                     //complete.html alag se file h jisme likha hua h h1 tag m Your form will be completed Registered
+   <h1>User id: <input type="text" placeholder="Enter a user name"id="n1"></h1> 
+   <h1> Email:   <input type="email"  placeholder="Enter your Email"id="n2"></h1>
+   <h1>  Contact: <input type="number" placeholder=" enter a number"id="n3"></h1>
+   <h1> password: <input type="password" placeholder="password"id="n4"></h1>
+   <h1>confirm password: <input type="password" placeholder=" confirm password"id="n5"></h1>
+    <h1><input type="submit"id="n6"></h1>
+</form>
+
+    
+   <script>
+    function x(){
+    let a=document.getElementById("n1").value;            //form using by javascript
+    let b=document.getElementById("n2").value;
+    let c=document.getElementById("n3").value;
+    let d=document.getElementById("n4").value;
+    let e=document.getElementById("n5").value;
+    
+    if(a=="" || b==""|| c==""|| d==""|| e==""){
+        alert("full fill form please");
+        return false;
+    }
+    else if(c.length<10 || c.length>10){
+        alert("Number should be a 10 digit");
+        return false;
+    }
+    else if(isNaN(c)){
+        alert(" Integers numbner only");
+        return false;
+    }
+    else if( d!=e){
+        alert(" Enter a same password");
+        return false;
+    }
+    else{
+        true;
+    }
+}
+    
+   </script>
+</body>
+</html>
