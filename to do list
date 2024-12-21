@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+</head>
+<body>
+    <input id="box" type="text" placeholder="Enter anything">  <!-- id me jo nam denge whi se usi se if else condtion lgayenge-->
+    <button onclick="clickme()"> Click </button>
+    <ul id="my"> </ul>
+
+    <script>
+        function clickme(){
+        let x=document.getElementById("my")
+
+            if(box.value==""){
+                alert("Please enter anything");
+            }
+            let add=document.createElement("li")
+            add.textContent=box.value;
+            x.appendChild(add);
+        }
+    </script>
+</body>
+</html>
